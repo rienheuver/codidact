@@ -1,0 +1,10 @@
+:root {
+    --aqua: #4ecdc4;
+    --blue: #40bcd8;
+    --orange: #f08700;
+    --yellow: #f49f0a;
+    --dark-green: #222725;
+
+    --primary-gradient: linear-gradient(90deg, var(--aqua) 0%, var(--blue) 100%);
+    --secondary-gradient: linear-gradient(90deg, var(--orange) 0%, var(--yellow) 100%);
+}

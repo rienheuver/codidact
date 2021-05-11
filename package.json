@@ -1,0 +1,33 @@
+{
+  "name": "codidact",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve",
+    "pretty": "yarn prettier --write src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rienheuver/codidact.git"
+  },
+  "author": "Rien Heuver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rienheuver/codidact/issues"
+  },
+  "homepage": "https://github.com/rienheuver/codidact#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^5.3.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
