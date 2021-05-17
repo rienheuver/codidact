@@ -1,5 +1,52 @@
-@import "./colours";
+
+$fa-font-path: "../assets/webfonts";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Red+Hat+Display:wght@400;700&display=swap");
+@import "~normalize.css/normalize.css";
+@import "./variables/colours";
+@import "./variables/variables";
+@import "./buttons";
+@import "./fontawesome/fontawesome";
+@import "./fontawesome/solid";
 
 body {
-    background: var(--primary-gradient);
+  font-family: "Open Sans", sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+footer {
+    background: var(--primary-gradient);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+
+    img {
+        position: absolute;
+        right: var(--padding);
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
+
+
+@import "./pages/landing-page";
+@import "./pages/participants";

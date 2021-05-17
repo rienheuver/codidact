@@ -1,55 +1,48 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: ['./src/app.js'],
-  devtool: 'inline-source-map',
+  entry: ["./src/app.js"],
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          'css-loader',
+          "style-loader",
+          "css-loader",
           {
-            loader: 'sass-loader',
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-              context: path.resolve(__dirname, 'src'),
-              outputPath: './',
-              publicPath: '../',
-              useRelativePaths: true,
-            },
+            loader: "sass-loader",
           },
         ],
       },
       {
         test: /\.hbs$/,
-        loader: 'handlebars-loader',
+        loader: "handlebars-loader",
+      },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        use: ["file-loader"],
       },
     ],
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: "./dist",
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: [".js"],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
   },
-  mode: 'development',
+  mode: "development",
   plugins: [
+    new CopyPlugin({
+      patterns: [{ from: "src/assets", to: "assets" }],
+    }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.hbs'),
+      template: path.resolve(__dirname, "./src/index.hbs"),
     }),
   ],
 };

@@ -1,0 +1,13 @@
+button, .button {
+    background: var(--secondary-gradient);
+    padding: var(--padding);
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
