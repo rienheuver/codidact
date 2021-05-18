@@ -12,17 +12,32 @@
     max-width: 150px;
   }
 
-  .menu a {
-    color: white;
-    padding: 0 var(--padding);
-    font-size: 1.2rem;
+  .menu {
+    display: flex;
+    flex-direction: column;
 
-    &:not(:first-child) {
-      border-left: 1px solid white;
+    @media (min-width: 800px) {
+      display: inline-block;
+
+      a:not(:first-child) {
+        border-left: 1px solid white;
+      }
+    }
+
+    a {
+      color: white;
+      padding: 0 var(--padding);
+      font-size: 1.2rem;
+      text-decoration: none;
+
+      &:not(:first-child) {
+        margin-top: var(--padding);
+      }
     }
   }
 
   .quote {
+    display: none;
     color: white;
     font-family: "Red Hat Display", sans-serif;
     position: absolute;
@@ -39,13 +54,26 @@
       font-weight: bold;
     }
 
-    @media (min-width: 800px) {
-        font-size: 1.3rem;
-        max-width: 350px;
+    @media (min-width: 500px) {
+      display: block;
+    }
 
-        p:nth-child(2) {
-            font-size: 1.8rem;
-        }
+    @media (min-width: 800px) {
+      font-size: 1.3rem;
+      max-width: 380px;
+
+      p:nth-child(2) {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (min-width: 1100px) {
+      font-size: 1.6rem;
+      max-width: 470px;
+
+      p:nth-child(2) {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -71,5 +99,87 @@
     .fa-hands {
       font-size: 10rem;
     }
+  }
+}
+
+.two-columns {
+  display: grid;
+  padding: 0 var(--padding-large);
+  gap: var(--padding-huge);
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  > div:first-child {
+    margin-top: calc(-1 * var(--padding-large));
+  }
+}
+
+.startupometer {
+  margin-top: var(--padding-huge);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: calc(2 * var(--padding-large));
+  margin-bottom: var(--padding-large);
+
+  img {
+    max-width: 60%;
+  }
+
+  .coach,
+  .accelerator {
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .coach {
+    position: absolute;
+    left: 0;
+    bottom: var(--padding-large);
+  }
+
+  .accelerator {
+    position: absolute;
+    right: -7rem;
+    bottom: 0;
+  }
+}
+
+.meedoen {
+  p {
+    margin: 0;
+  }
+
+  strong {
+    display: inline-block;
+    margin-top: var(--padding);
+  }
+}
+
+.experiences .placeholder {
+  display: block;
+  background: var(--light-grey);
+  width: 500px;
+  height: 281px;
+  margin-bottom: var(--padding-large);
+}
+
+.what {
+  margin-bottom: var(--padding-large);
+}
+
+.contact {
+  i {
+    font-size: 1.3rem;
+    margin-right: var(--padding);
+    color: var(--orange);
   }
 }

@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+  padding-inline-start: 20px;
+  margin: 0;
+
+  li {
+    margin-bottom: var(--padding);
+    &::before {
+      content: "\2022";
+      color: var(--dark-green);
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem;
+    }
+  }
+}

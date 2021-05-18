@@ -6,6 +6,7 @@ $fa-font-path: "../assets/webfonts";
 @import "./variables/colours";
 @import "./variables/variables";
 @import "./buttons";
+@import "./lists";
 @import "./fontawesome/fontawesome";
 @import "./fontawesome/solid";
 
@@ -22,6 +23,30 @@ h6 {
   font-family: "Red Hat Display", sans-serif;
   font-weight: bold;
   text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: var(--secondary-gradient);
+    top: 100%;
+    left: 15px;
+  }
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+p {
+  max-width: 70%;
 }
 
 * {
@@ -36,6 +61,7 @@ footer {
     justify-content: center;
     position: relative;
     color: white;
+    margin-top: var(--padding-large);
 
     img {
         position: absolute;
