@@ -11,3 +11,12 @@ button, .button {
     text-align: center;
     box-sizing: border-box;
 }
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
