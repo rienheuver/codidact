@@ -164,12 +164,30 @@
   }
 }
 
-.experiences .placeholder {
-  display: block;
-  background: var(--light-grey);
-  width: 500px;
-  height: 281px;
+.experiences .videos {
   margin-bottom: var(--padding-large);
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--padding);
+
+  i {
+    font-size: 1.5rem;
+    margin: 0 var(--padding);
+    color: var(--orange);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--yellow);
+    }
+
+    &:first-child {
+      margin-right: var(--padding-large);
+    }
+  }
 }
 
 .what {

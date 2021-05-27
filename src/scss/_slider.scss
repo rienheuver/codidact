@@ -1,0 +1,26 @@
+/*
+Author: Rien Heuver, rienheuver@gmail.com
+Clean Slider, this is all that is needed
+https://github.com/rienheuver/rienheuver.github.io
+*/
+.slider {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    width: 100%;
+    perspective: 400px;
+}
+
+.slide {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transition: transform 300ms ease-in-out;
+}
+
+.slide-next {
+    transform: translateX(100%);
+}
+
+.slide-prev {
+    transform: translateX(-100%);
+}

@@ -7,7 +7,10 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo-with-slogan.svg" alt="Codidact logo met slogan" />
+      <img
+        src="./assets/images/logo-with-slogan.svg"
+        alt="Codidact logo met slogan"
+      />
     </header>
     <section class="choice-buttons">
       <div>
@@ -20,7 +23,7 @@
       </div>
     </section>
     <section id="deelnemers" class="participants-header">
-      <img src="./assets/logo.svg" alt="Codidact logo" />
+      <img src="./assets/images/logo.svg" alt="Codidact logo" />
 
       <span class="menu">
         <a href="#ons-verhaal">Ons verhaal</a>
@@ -62,7 +65,7 @@
             te krijgen, zo kunt verwezenlijken.</li>
         </ul>
         <div class="startupometer">
-          <img src="assets/speedometer.svg" alt="Speedometer" />
+          <img src="assets/images/speedometer.svg" alt="Speedometer" />
           <div class="coach">
             <h2>Startup Coach</h2>
             <p>Met begeleiding een potentiële onderneming opbouwen</p>
@@ -88,8 +91,20 @@
       <div>
         <div class="experiences">
           <h2>Ervaringen</h2>
-          <p>Hier komen de filmpjes...</p>
-          <div class="placeholder"></div>
+          <div class="slider">
+            <video controls width="500" class="slide slide-active">
+              <source src="assets/videos/interview-max.mp4" type="video/mp4" />
+              Je browser ondersteunt geen html5-video.
+            </video>
+            <video controls width="500" class="slide slide-next">
+              <source src="assets/videos/interview-wouter.mp4" type="video/mp4" />
+              Je browser ondersteunt geen html5-video.
+            </video>
+          </div>
+          <div class="slider-controls">
+            <i class="fas fa-step-backward" onclick="prevSlide()"></i>
+            <i class="fas fa-step-forward" onclick="nextSlide()"></i>
+          </div>
         </div>
         <div class="what" id="wat-is-codidact">
           <h2>Wat is Codidact?</h2>
@@ -113,14 +128,16 @@
         <div class="contact" id="contact">
           <h2>Contact</h2>
           <p><i class="fas fa-building"></i>Zutphenseweg 6, Deventer</p>
-          <p><i class="fas fa-envelope"></i><a href="mailto:info@codidact.nl">info@codidact.nl</a></p>
+          <p><i class="fas fa-envelope"></i><a
+              href="mailto:info@codidact.nl"
+            >info@codidact.nl</a></p>
         </div>
       </div>
     </section>
     <footer>
       <p>Copyright &copy; Codidact
         <script>document.write(new Date().getFullYear())</script></p>
-      <img src="./assets/icon.svg" alt="Codidact icon" />
+      <img src="./assets/images/icon.svg" alt="Codidact icon" />
     </footer>
   </body>
 </html>
