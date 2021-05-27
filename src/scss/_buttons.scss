@@ -12,7 +12,7 @@ button, .button {
     box-sizing: border-box;
 }
 
-a {
+a:not(button, .button) {
     color: var(--orange);
     text-decoration: none;
 

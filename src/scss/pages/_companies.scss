@@ -1,0 +1,198 @@
+.companies-header {
+    background: var(--secondary-gradient);
+    height: 40vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    padding: var(--padding);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    img {
+      max-width: 150px;
+    }
+  
+    .menu {
+      display: flex;
+      flex-direction: column;
+  
+      @media (min-width: 800px) {
+        display: inline-block;
+  
+        a:not(:first-child) {
+          border-left: 1px solid white;
+        }
+      }
+  
+      a {
+        color: white;
+        padding: 0 var(--padding);
+        font-size: 1.2rem;
+        text-decoration: none;
+  
+        &:not(:first-child) {
+          margin-top: var(--padding);
+        }
+      }
+    }
+  
+    .quote {
+      display: none;
+      color: white;
+      font-family: "Red Hat Display", sans-serif;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+  
+      p:nth-child(2) {
+        font-size: 1.5rem;
+        float: right;
+        margin: 0;
+        padding: 0 1rem;
+        font-weight: bold;
+      }
+  
+      @media (min-width: 500px) {
+        display: block;
+      }
+  
+      @media (min-width: 800px) {
+        font-size: 1.3rem;
+        max-width: 380px;
+  
+        p:nth-child(2) {
+          font-size: 1.8rem;
+        }
+      }
+  
+      @media (min-width: 1100px) {
+        font-size: 1.6rem;
+        max-width: 470px;
+  
+        p:nth-child(2) {
+          font-size: 2rem;
+        }
+      }
+    }
+  
+    .background-icon {
+      position: absolute;
+      right: var(--padding);
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      opacity: 0.34;
+  
+      @media (min-width: 700px) {
+        right: 5rem;
+      }
+  
+      .fa-comment-check {
+        font-size: 4rem;
+        margin-bottom: -3rem;
+      }
+  
+      .fa-hands {
+        font-size: 10rem;
+      }
+    }
+  }
+  
+  .companies {
+    display: grid;
+    padding: 0 var(--padding-large);
+    gap: var(--padding-huge);
+  
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    h2 {
+        font-size: 2rem;
+      
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 7px;
+          background: var(--primary-gradient);
+          top: 100%;
+          left: 15px;
+        }
+      }
+  
+    > div:first-child {
+      margin-top: calc(-1 * var(--padding-large));
+    }
+    
+    .meedoen {
+      p {
+        margin: 0;
+      }
+    
+      
+    }
+    
+    .experiences .videos {
+      margin-bottom: var(--padding-large);
+    }
+    
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: var(--padding);
+    
+      i {
+        font-size: 1.5rem;
+        margin: 0 var(--padding);
+        color: var(--orange);
+        cursor: pointer;
+    
+        &:hover {
+          color: var(--yellow);
+        }
+    
+        &:first-child {
+          margin-right: var(--padding-large);
+        }
+      }
+    }
+    
+    .what {
+      margin-bottom: var(--padding-large);
+    }
+    
+    .contact {
+      i {
+        font-size: 1.3rem;
+        margin-right: var(--padding);
+        color: var(--orange);
+      }
+    }
+    
+  }
+
+  .companies-footer {
+    background: var(--secondary-gradient);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    margin-top: var(--padding-large);
+
+    img {
+        position: absolute;
+        right: var(--padding);
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 60px;
+        max-height: 60px;
+    }
+}
